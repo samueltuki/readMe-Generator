@@ -34,7 +34,7 @@ inquirer.prompt(
             message: "how is your project used?",
         },
         {
-            type: "input",
+            type: "checkbox",
             name: "license",
             message: "which of these license is applicable to your repo?",
             choices: ["APACHE", "TOMCAST", "MIDDLEWARE","MIT","NONE"]
@@ -47,7 +47,7 @@ inquirer.prompt(
         {
             type: "input",
             name: "test",
-            message: "required test? please provide walk through",
+            message: "require test? please provide walk through",
         }
     ]
 ).then(data => console.log(data));
