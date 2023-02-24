@@ -5,11 +5,9 @@ const fs = require("fs");
 const path = require('path');
 // const generateMarkdown = require("./utils/generateMarkdown");
 
-// import inquirer from "inquirer";
-// import fs from "fs/promise";
-
 
 // array of questions for user
+const userQuestion = () =>
 inquirer.prompt(
 
     [
@@ -50,21 +48,33 @@ inquirer.prompt(
             message: "require test? please provide walk through",
         }
     ]
-).then(data => console.log(data));
+)
+userQuestion().then(data => console.log(data)) 
+// function to write README file
+// function writeToFile(fileName, data) {
+    
+//     return fs.writeFile(fileName, data);
+//   }
+  
+  // // function to initialize program
+//   function init() {
+//     //  inquirer.prompt(questions).then((responses) =>{
+//     //  })
+//     writeToFile("README.md")
+//   }
+  
+  // // function call to initialize program
+//   init();
+  
 
 
 
-// // function to write README file
-function writeToFile(fileName, data) {
 
-}
 
-// // function to initialize program
-// function init() {
 
-// }
 
-// // function call to initialize program
-// init();
+
+
+
 
 
