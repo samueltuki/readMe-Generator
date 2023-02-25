@@ -22,14 +22,14 @@ function generateMarkdown(data) {
   ${data.contributor}
   ## Tests
   ${data.test}
-  
+  ## Questions
+  Any questions about this project please send me a message on https://github.com/${data.github} or email me at [${data.email}](mailto:${data.email})
 
 `
 return readMe;
 }
 
-// ## Questions
-// Any questions about this project please send me a message on https://github.com/${github} or email me at [${email}](mailto:${email})
+
 
 
 
