@@ -50,7 +50,6 @@ inquirer.prompt(
     ]
 )
 
-// userQuestion().then(data => console.log(data)) 
 
 // function to write README file
 function writeToFile(fileName, data) {
@@ -65,6 +64,7 @@ function writeToFile(fileName, data) {
   
   // function to initialize program
   function init() {
+    // called userQuestion to prompt the user for input and when resolves pass it to writeToFile
     userQuestion().then(data => writeToFile("README.md",data));
     
   }

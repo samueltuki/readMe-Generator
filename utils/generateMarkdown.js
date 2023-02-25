@@ -31,6 +31,6 @@ return readMe;
 // ## Questions
 // Any questions about this project please send me a message on https://github.com/${github} or email me at [${email}](mailto:${email})
 
-// await fs.writeFile('README.md', readMe);
+
 
 module.exports = generateMarkdown;
