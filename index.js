@@ -3,7 +3,7 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
 const path = require('path');
-// const generateMarkdown = require("./utils/generateMarkdown");
+const generateMarkdown = require("./utils/generateMarkdown");
 
 
 // array of questions for user
@@ -49,22 +49,23 @@ inquirer.prompt(
         }
     ]
 )
-userQuestion().then(data => console.log(data)) 
+
+// userQuestion().then(data => console.log(data)) 
+
 // function to write README file
-// function writeToFile(fileName, data) {
+function writeToFile(fileName, data) {
     
-//     return fs.writeFile(fileName, data);
-//   }
+   fs.writeFile(fileName, data);
+  } 
   
-  // // function to initialize program
-//   function init() {
-//     //  inquirer.prompt(questions).then((responses) =>{
-//     //  })
-//     writeToFile("README.md")
-//   }
+  // function to initialize program
+  function init() {
+    userQuestion().then(data => writeToFile("README.md",data));
+    
+  }
   
-  // // function call to initialize program
-//   init();
+  // function call to initialize program
+  init();
   
 
 
