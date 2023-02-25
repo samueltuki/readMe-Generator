@@ -54,8 +54,13 @@ inquirer.prompt(
 
 // function to write README file
 function writeToFile(fileName, data) {
-    
-   fs.writeFile(fileName, data);
+    fs.writeFile(fileName, generateMarkdown(data), (err) => {
+      if (err) {
+        console.log(err);
+      } else {
+        console.log('File written successfully!');
+      }
+    });
   } 
   
   // function to initialize program

@@ -3,7 +3,7 @@ function generateMarkdown(data) {
   const readMe = `
   # ${data.title}
   ## Description
-  ${description}
+  ${data.description}
   ## Table Of Content
   *[title](#title)
   *[description](#description)
@@ -13,21 +13,23 @@ function generateMarkdown(data) {
   *[contributor](#contributor)
   *[test](#test)
   ## Installation
-  ${installation}
+  ${data.installation}
   ## How is your project used?
-  ${usage}
+  ${data.usage}
   ## license
-  ${license}
+  ${data.license}
   ## Contributors
-  ${contributor}
+  ${data.contributor}
   ## Tests
-  ${test}
-  ## Questions
-  Any questions about this project please send me a message on https://github.com/${github} or email me at [${email}](mailto:${email})
+  ${data.test}
+  
 
 `
 return readMe;
 }
+
+// ## Questions
+// Any questions about this project please send me a message on https://github.com/${github} or email me at [${email}](mailto:${email})
 
 // await fs.writeFile('README.md', readMe);
 
