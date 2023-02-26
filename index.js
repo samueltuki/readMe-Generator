@@ -55,7 +55,7 @@ const userQuestion = () =>
       },
   ]);
 
-// function to write README file
+// function to write README file, method which took 2 parameter, it does this by calling fs.writeFile() 
 function writeToFile(fileName, data) {
   fs.writeFile(fileName, generateMarkdown(data), (err) => {
     if (err) {
@@ -68,7 +68,7 @@ function writeToFile(fileName, data) {
 
 // function to initialize program
 function init() {
-  // called userQuestion to prompt the user for input and when resolves pass it to writeToFile
+  // called userQuestion to prompt the user for input and when resolved it is pass the value (i.e., the user's input) to  writeToFile function
   userQuestion().then((data) => writeToFile("README.md", data));
 }
 

@@ -1,29 +1,37 @@
 
-  # DOD
+  # by calling fs.write() 
   ## Description
-  D
+  by calling fs.write() 
   ## Table Of Content
   *[Title](#title)
+
   *[Description](#description)
+
   *[Installation](#installation)
+
   *[Usage](#usage)
+
   *[License](#license)
-  *[Contributor](#contributor)
-  *[Test](#test)
+
+  *[Contributors](#contributor)
+
+  *[Tests](#test)
+
   *[Questions](#questions)
+
   ## Installation
   undefined
-  ## How is your project used?
-  D
-  ## license
+  ## Usage?
+  by calling fs.write() 
+  ## License
   [![License: MIDDLEWARE](https://img.shields.io/badge/License-MIDDLEWARE-brightgreen.svg)](https://opensource.org/licenses/MIDDLEWARE)
 
 
   ## Contributors
-  D
+  jjfxjds lhvdsl;k
   ## Tests
-  D
+  klsnsv/nfv l
   ## Questions
-  Any questions about this project please send me a message on https://github.com/D or email me at [D](mailto:D)
+  Any questions about this project please send me a message on https://github.com/lorelkdhdfhgdflvjdf or email me at [sashdkbkdsd](mailto:sashdkbkdsd)
   ## License
-  This project is licensed under the MIDDLEWARE license.
+  This project is licensed under the MIDDLEWARE .

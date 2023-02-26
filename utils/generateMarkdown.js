@@ -7,25 +7,33 @@ function generateMarkdown(data) {
     licenseBadge = `[![License: ${data.license}](https://img.shields.io/badge/License-${data.license}-brightgreen.svg)](https://opensource.org/licenses/${data.license})\n\n`;
   }
 
-// variable that generate the readMe file
+// variable that generate the readMe file 
   const readMe = `
   # ${data.title}
   ## Description
   ${data.description}
   ## Table Of Content
   *[Title](#title)
+
   *[Description](#description)
+
   *[Installation](#installation)
+
   *[Usage](#usage)
+
   *[License](#license)
-  *[Contributor](#contributor)
-  *[Test](#test)
+
+  *[Contributors](#contributor)
+
+  *[Tests](#test)
+
   *[Questions](#questions)
+
   ## Installation
   ${data.installation}
-  ## How is your project used?
+  ## Usage?
   ${data.usage}
-  ## license
+  ## License
   ${licenseBadge}
   ## Contributors
   ${data.contributor}
@@ -34,7 +42,7 @@ function generateMarkdown(data) {
   ## Questions
   Any questions about this project please send me a message on https://github.com/${data.github} or email me at [${data.email}](mailto:${data.email})
   ${data.license ? `## License
-  This project is licensed under the ${data.license} license.` : ''}
+  This project is licensed under the ${data.license} .` : ''}
 `
 return readMe;
 }
