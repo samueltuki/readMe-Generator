@@ -6,74 +6,79 @@ const generateMarkdown = require("./utils/generateMarkdown");
 
 // array of questions for user
 const userQuestion = () =>
-
-
   inquirer.prompt([
     {
       type: "input",
       name: "title",
       message: "what is the title of the project?",
       // added validation should incase the user doesn't input any answer
-      validate: answer => answer === "" ? "Going to need an answer mate" : true
+      validate: (answer) =>
+        answer === "" ? "Going to need an answer mate" : true,
     },
     {
       type: "input",
       name: "description",
       message: "please describe your project.",
-      validate: answer => answer === "" ? "Going to need an answer mate" : true
+      validate: (answer) =>
+        answer === "" ? "Going to need an answer mate" : true,
     },
     {
       type: "input",
       name: "Installation",
       message: "how do you install your project?",
-      validate: answer => answer === "" ? "Still going to need an answer pal" : true
+      validate: (answer) =>
+        answer === "" ? "Still going to need an answer pal" : true,
     },
     {
       type: "input",
       name: "usage",
       message: "how is your project used?",
-      validate: answer => answer === "" ? "Going to need an answer pal" : true
+      validate: (answer) =>
+        answer === "" ? "Going to need an answer pal" : true,
     },
     {
       type: "checkbox",
       name: "license",
       message: "which of these license is applicable to your repo?",
-      choices: ["APACHE", "TOMCAST", "MIDDLEWARE", "MIT", "NONE"]
+      choices: ["APACHE", "TOMCAST", "MIDDLEWARE", "MIT", "NONE"],
     },
     {
       type: "input",
       name: "contributor",
       message: "please list contributors?",
-      validate: answer => answer === "" ? "Going to need an answer pal" : true,
+      validate: (answer) =>
+        answer === "" ? "Going to need an answer pal" : true,
     },
     {
       type: "input",
       name: "test",
       message: "require test? please provide walk through",
-      validate: answer => answer === "" ? "Going to need an answer mate" : true,
+      validate: (answer) =>
+        answer === "" ? "Going to need an answer mate" : true,
     },
     {
-        type: "input",
-        name: "github",
-        message: "what is your github username?",
-        validate: answer => answer === "" ? "Going to need an answer mate" : true,
-      },
-      {
-        type: "input",
-        name: "email",
-        message: "what is your email address?",
-        validate: function(answer){
-          const emailRegex = /^[\w!#$%&'*+/=?`{|}~^-]+(?:\.[\w!#$%&'*+/=?`{|}~^-]+)*@(?:[A-Z0-9-]+\.)+[A-Z]{2,6}$/i;
-          if(!emailRegex.test(answer)){
-            return "no way man! please get valid";
-          }
-          return true;
-
+      type: "input",
+      name: "github",
+      message: "what is your github username?",
+      validate: (answer) =>
+        answer === "" ? "Going to need an answer mate" : true,
+    },
+    {
+      type: "input",
+      name: "email",
+      message: "what is your email address?",
+      validate: function (answer) {
+        const emailRegex =
+          /^[\w!#$%&'*+/=?`{|}~^-]+(?:\.[\w!#$%&'*+/=?`{|}~^-]+)*@(?:[A-Z0-9-]+\.)+[A-Z]{2,6}$/i;
+        if (!emailRegex.test(answer)) {
+          return "no way man! please get valid";
         }
+        return true;
       },
+    },
   ]);
 
-// function to write README file, method which took 2 parameter, it does this by calling fs.writeFile() 
+// function to write README file, method which took 2 parameter, it does this by calling fs.writeFile()
 function writeToFile(fileName, data) {
   fs.writeFile(fileName, generateMarkdown(data), (err) => {
     if (err) {

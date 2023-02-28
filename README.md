@@ -1,7 +1,7 @@
 
-  # v
+  # Professional README generator
   ## Description
-  v
+  This command-line application dynamically generates a professional README.md file from a user's input using the inquirer package. Users can quickly and easily create a README file for their projects.
   ## Table Of Content
   *[Title](#title)
 
@@ -22,16 +22,16 @@
   ## Installation
   undefined
   ## Usage?
-  v
+  In the command line type node and the name of your js file, then answer the questions to gnerate the readme file.
   ## License
-  [![License: TOMCAST](https://img.shields.io/badge/License-TOMCAST-brightgreen.svg)](https://opensource.org/licenses/TOMCAST)
+  [![License: MIT](https://img.shields.io/badge/License-MIT-brightgreen.svg)](https://opensource.org/licenses/MIT)
 
 
   ## Contributors
-  v
+  Users can create an issue or contact the repo's owner for more information.
   ## Tests
-  v
+  N/A
   ## Questions
-  Any questions about this project please send me a message on https://github.com/v or email me at [samuel_tuki@yahoo.com](mailto:samuel_tuki@yahoo.com)
+  Any questions about this project please send me a message on https://github.com/samueltuki or email me at [samuel_tuki@yahoo.com](mailto:samuel_tuki@yahoo.com)
   ## License
-  This project is licensed under the TOMCAST .
+  This project is licensed under the MIT .
